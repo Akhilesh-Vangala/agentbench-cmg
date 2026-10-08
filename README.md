@@ -1,6 +1,6 @@
-# AgentBench-CMG
+# Agent Config Bench
 
-Controlled experiments on what makes a healthcare-evidence agent reliable: **tool access, reusable skills, and model choice**. The agent under test is [cmg-deep-claude-agent](https://github.com/Akhilesh-Vangala/cmg-deep-claude-agent), a Claude Code agent with an MCP server over live openFDA, ClinicalTrials.gov, and CMS data. Each configuration changes one thing and runs on the same 30 golden tasks with the same programmatic grader.
+Controlled experiments on what makes a healthcare-evidence agent reliable: **tool access, reusable skills, and model choice**. The agent under test is [evidence-mcp-agent](https://github.com/Akhilesh-Vangala/evidence-mcp-agent), a Claude Code agent with an MCP server over live openFDA, ClinicalTrials.gov, and CMS data. Each configuration changes one thing and runs on the same 30 golden tasks with the same programmatic grader.
 
 ## Design
 
@@ -79,14 +79,14 @@ Claim-level failures in C: quote not found verbatim in the cited source (10), qu
 Runs are produced by the agent repo; this repo analyzes them.
 
 ```bash
-# in cmg-deep-claude-agent
+# in evidence-mcp-agent
 cmg-eval-agent --configs BASELINE --workers 6
 cmg-eval-agent --configs A_closed_book B_tools_only C_tools_skills --repeats 2 --workers 6
 cmg-eval-agent --configs D_tools_skills_sonnet --workers 5
 
 # here
 pip install -e .
-agentbench-cmg path/to/reports/eval-*.json     # writes results/ and reports/
+agent-config-bench path/to/reports/eval-*.json     # writes results/ and reports/
 ```
 
 The exact eval outputs analyzed above (every run, every check) are in [`results/raw/`](results/raw/); computed metrics are in [`results/summary.json`](results/summary.json) and [`results/paired.json`](results/paired.json).
