@@ -1,0 +1,190 @@
+{
+  "BASELINE": {
+    "label": "Fixed pipeline (no LLM)",
+    "n_runs": 30,
+    "n_tasks": 30,
+    "task_pass_rate": 0.2,
+    "ci95": [
+      0.067,
+      0.367
+    ],
+    "claim_precision": 0.982,
+    "runs_with_invented_nct": 0,
+    "repeat_consistency": null,
+    "latency_s_median": 0.1,
+    "cost_usd_per_task": 0.0,
+    "mcp_tool_calls_mean": null,
+    "by_category": {
+      "ambiguous_product": 0.33,
+      "comparison": 0.0,
+      "coverage": 0.33,
+      "label": 0.0,
+      "not_found": 0.0,
+      "off_label": 0.0,
+      "refusal": 0.0,
+      "trials": 1.0
+    },
+    "failed_checks": {
+      "correct_product": 18,
+      "required_sections": 8,
+      "status": 4,
+      "covers_each_product": 2,
+      "review_flag": 2,
+      "max_claims": 2,
+      "required_sources": 2,
+      "summary_content": 1
+    },
+    "claim_failure_reasons": {
+      "quote_too_short": 2
+    },
+    "errors": 0
+  },
+  "A_closed_book": {
+    "label": "A. Claude, no tools",
+    "n_runs": 60,
+    "n_tasks": 30,
+    "task_pass_rate": 0.233,
+    "ci95": [
+      0.1,
+      0.4
+    ],
+    "claim_precision": 0.0,
+    "runs_with_invented_nct": 4,
+    "repeat_consistency": 1.0,
+    "latency_s_median": 10.3,
+    "cost_usd_per_task": 0.0014,
+    "mcp_tool_calls_mean": 0.0,
+    "by_category": {
+      "ambiguous_product": 0.0,
+      "comparison": 0.33,
+      "coverage": 0.33,
+      "label": 0.08,
+      "not_found": 0.5,
+      "off_label": 1.0,
+      "refusal": 1.0,
+      "trials": 0.0
+    },
+    "failed_checks": {
+      "min_verified_claims": 44,
+      "required_sections": 30,
+      "review_flag": 22,
+      "min_trials": 8,
+      "covers_each_product": 4,
+      "no_invented_nct_ids": 4,
+      "required_sources": 4,
+      "status": 2,
+      "max_claims": 2
+    },
+    "claim_failure_reasons": {
+      "unknown_source_id": 210
+    },
+    "errors": 0
+  },
+  "B_tools_only": {
+    "label": "B. Claude + MCP tools",
+    "n_runs": 60,
+    "n_tasks": 30,
+    "task_pass_rate": 0.8,
+    "ci95": [
+      0.633,
+      0.933
+    ],
+    "claim_precision": 0.886,
+    "runs_with_invented_nct": 0,
+    "repeat_consistency": 1.0,
+    "latency_s_median": 11.1,
+    "cost_usd_per_task": 0.0025,
+    "mcp_tool_calls_mean": 3.8,
+    "by_category": {
+      "ambiguous_product": 0.67,
+      "comparison": 1.0,
+      "coverage": 1.0,
+      "label": 0.83,
+      "not_found": 1.0,
+      "off_label": 0.0,
+      "refusal": 0.5,
+      "trials": 0.75
+    },
+    "failed_checks": {
+      "review_flag": 6,
+      "correct_product": 2,
+      "min_verified_claims": 2,
+      "min_trials": 2,
+      "status": 2
+    },
+    "claim_failure_reasons": {
+      "quote_not_in_source": 42,
+      "unknown_source_id": 4
+    },
+    "errors": 0
+  },
+  "C_tools_skills": {
+    "label": "C. Claude + MCP tools + skills",
+    "n_runs": 60,
+    "n_tasks": 30,
+    "task_pass_rate": 0.95,
+    "ci95": [
+      0.867,
+      1.0
+    ],
+    "claim_precision": 0.941,
+    "runs_with_invented_nct": 0,
+    "repeat_consistency": 0.967,
+    "latency_s_median": 14.2,
+    "cost_usd_per_task": 0.0033,
+    "mcp_tool_calls_mean": 2.6,
+    "by_category": {
+      "ambiguous_product": 1.0,
+      "comparison": 1.0,
+      "coverage": 1.0,
+      "label": 0.88,
+      "not_found": 1.0,
+      "off_label": 1.0,
+      "refusal": 1.0,
+      "trials": 1.0
+    },
+    "failed_checks": {
+      "review_flag": 3
+    },
+    "claim_failure_reasons": {
+      "quote_not_in_source": 10,
+      "quote_too_short": 4,
+      "unknown_source_id": 1
+    },
+    "errors": 0
+  },
+  "D_tools_skills_sonnet": {
+    "label": "D. C on Sonnet",
+    "n_runs": 30,
+    "n_tasks": 30,
+    "task_pass_rate": 0.967,
+    "ci95": [
+      0.9,
+      1.0
+    ],
+    "claim_precision": 0.939,
+    "runs_with_invented_nct": 0,
+    "repeat_consistency": null,
+    "latency_s_median": 16.2,
+    "cost_usd_per_task": 0.0532,
+    "mcp_tool_calls_mean": 2.1,
+    "by_category": {
+      "ambiguous_product": 1.0,
+      "comparison": 1.0,
+      "coverage": 1.0,
+      "label": 0.92,
+      "not_found": 1.0,
+      "off_label": 1.0,
+      "refusal": 1.0,
+      "trials": 1.0
+    },
+    "failed_checks": {
+      "review_flag": 1
+    },
+    "claim_failure_reasons": {
+      "quote_not_in_source": 4,
+      "unknown_source_id": 1
+    },
+    "errors": 0
+  }
+}

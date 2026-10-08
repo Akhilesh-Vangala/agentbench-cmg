@@ -1,0 +1,107 @@
+[
+  {
+    "from": "BASELINE",
+    "to": "C_tools_skills",
+    "n_tasks": 30,
+    "pass_rate_diff": 0.75,
+    "ci95": [
+      0.6,
+      0.9
+    ],
+    "tasks_improved": [
+      "A01",
+      "A02",
+      "C01",
+      "C02",
+      "C03",
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L11",
+      "L12",
+      "N01",
+      "N02",
+      "R01",
+      "R02",
+      "R03",
+      "V01",
+      "V02"
+    ],
+    "tasks_regressed": []
+  },
+  {
+    "from": "A_closed_book",
+    "to": "B_tools_only",
+    "n_tasks": 30,
+    "pass_rate_diff": 0.567,
+    "ci95": [
+      0.333,
+      0.767
+    ],
+    "tasks_improved": [
+      "A01",
+      "A03",
+      "C01",
+      "C02",
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L06",
+      "L08",
+      "L09",
+      "L11",
+      "L12",
+      "N02",
+      "T01",
+      "T03",
+      "T04",
+      "V01",
+      "V02"
+    ],
+    "tasks_regressed": [
+      "R02",
+      "R03"
+    ]
+  },
+  {
+    "from": "B_tools_only",
+    "to": "C_tools_skills",
+    "n_tasks": 30,
+    "pass_rate_diff": 0.15,
+    "ci95": [
+      0.017,
+      0.3
+    ],
+    "tasks_improved": [
+      "A02",
+      "L05",
+      "R02",
+      "R03",
+      "T02"
+    ],
+    "tasks_regressed": [
+      "L11"
+    ]
+  },
+  {
+    "from": "C_tools_skills",
+    "to": "D_tools_skills_sonnet",
+    "n_tasks": 30,
+    "pass_rate_diff": 0.017,
+    "ci95": [
+      0.0,
+      0.05
+    ],
+    "tasks_improved": [
+      "L11"
+    ],
+    "tasks_regressed": []
+  }
+]
